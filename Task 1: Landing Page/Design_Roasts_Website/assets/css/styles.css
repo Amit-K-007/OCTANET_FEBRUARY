@@ -1,0 +1,730 @@
+/* Initial Styling */
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+html{
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    font-size: 1.3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgba(254, 254, 254, 0.94),rgba(254, 254, 254, 0.94)), url("../images/Background_Image.jpg");
+    background-size: contain;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background: #C2C6CC;
+}
+
+/* Header Section */
+header{
+    width: 100%;
+    padding: 1em 2em;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav div a:hover{
+    color: #536500;
+}
+header nav div>*{
+    font-weight: 500;
+    color: #000000;
+    margin-right: 1.1em;
+    font-size: 0.9em;
+}
+header nav button{
+    border: 2px solid #000000;
+    background-color: white;
+    padding: 0.6em 1em;
+    border-radius: 8px;
+}
+header nav button:hover{
+    color: #ffffff;
+    background-color: #000000;
+}
+header nav img{
+    max-width: 150px;
+}
+
+/* Hero Section */
+#hero{
+    padding: 2.5em 4em;
+    width: 100%;
+    max-width: 1440px;
+}
+#hero .container{
+    display: grid;
+    grid-template-columns: 64% 34%;
+    grid-template-rows: auto auto;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+#hero h1{
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 4em;
+}
+#hero .mobile-img{
+    grid-area: 1/2/3/3;
+    height: auto;
+    width: 100%;
+    margin-top: 6em;
+    position: relative;
+}
+#hero .mobile-img .mobile{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+#hero .mobile-img img:first-child{
+    position: absolute;
+    width: 9.5em;
+    top: 3.4em;
+    left: -2.5em;
+}
+#hero .mobile-img img:last-child{
+    position: absolute;
+    z-index: -1;
+    width: 13em;
+    top: -10%;
+    right: -10%;
+}
+#hero .tab-img{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+#hero .tab-img img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+#hero .tab-img img:first-child{
+    position: absolute;
+    width: 17em;
+    top: 20%;
+    right: -15%;
+}
+#hero .tab-img img:last-child{
+    position: absolute;
+    width: 12em;
+    bottom: -10%;
+    right: 20%;
+}
+#hero p{
+    font-size: 1.4em;
+    margin: 1.4em 0;
+    width: 90%;
+}
+.black-button{
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #000000;
+}
+.black-button:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+#hero .stars{
+    display: flex;
+    align-items: center;
+    margin: 30px 0 10px 0;
+}
+#hero .stars .material-icons{
+    font-size: 1.2em;
+    color: gold;
+}
+#hero .stars span:last-child{
+    font-size: 0.8em;
+    font-weight: 300;
+    margin-left: 1em;
+}
+
+/* Process Section */
+#process h2{
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 2.4em;
+}
+#process {
+    margin: 9.5em 0;
+    padding: 0 4em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1440px;
+}
+#process .steps span:first-child{
+    font-weight: 300;
+}
+#process .steps{
+    margin: 2em 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+}
+#process .steps img{
+    width: 3em;
+    height: auto;
+    margin: 0 1.5em;
+}
+#process > span{
+    font-weight: 300;
+    font-size: 0.8em;
+}
+#process .steps span{
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+/* Benefit Section */
+#benefit{
+    padding: 0 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1120px;
+    text-align: center;
+}
+#benefit h2{
+    max-width: 900px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 3em;
+}
+#benefit p{
+    max-width: 1000px;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+#benefit ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3em 0;
+}
+#benefit ul li{
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 100px;
+    margin: 5px 5px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+#benefit ul span:first-child{
+    transition: all 0.1s ease;
+    font-size: 1.5em;
+    background-color: #00000018;
+    border-radius: 50%;
+    padding: 5px;
+}
+#benefit ul span:last-child{
+    transition: all 0.3s ease;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-left: 10px;
+}
+#benefit ul li:hover{
+    background-color: #000000;
+
+}
+#benefit ul li:hover span:last-child{
+    color: #ffffff;
+}
+#benefit ul li:hover span:first-child{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Example Section */
+#example{
+    max-width: 1440px;
+    padding: 0 4em;
+}
+#example > div{
+    display: flex;
+    margin: 0 100px;
+    border: 2px solid #000000;
+    border-radius: 30px;
+    margin: 9em 0;
+    background-color: #ffffff;
+}
+#example .left{
+    padding: 3.5em;
+    width: 60%; 
+}
+#example .left > span{
+    background-color: #e3e6e8;
+    font-size: 0.7em;
+    padding: 5px 10px;
+    font-weight: 500;
+    border-radius: 16px;
+}
+#example .left h2{
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 3em;
+}
+#example .left .heading{
+    position: relative;
+    margin-top: 1.2em;
+}
+#example .left .heading img{
+    position: absolute;
+    top: 25%;
+    right: -18%;
+    width: 12em;
+}
+#example .left .question{
+    padding: 1.5em 1.5em;
+    border-radius: 16px;
+    border: 2px #C2C6CC dashed;
+    margin: 2em 0;
+}
+#example .left .question span{
+    font-size: 1.2em;
+}
+#example .left .question span:first-child{
+    font-weight: 700;
+    color: #C2C6CC;
+}
+#example .left .points{
+    display: flex;
+    justify-content: space-between;
+}
+#example .left .points img{
+    object-fit: contain;
+    width: 11em;
+}
+#example .right{
+    height: 100%;
+    width: 40%;
+    padding: 0 3.5em 6em 2.5em;
+    position: relative;
+}
+#example .right img{
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+}
+#example .right img:last-child{
+    position: absolute;
+    width: 12em;
+    bottom: 5%;
+    right: 25%;
+}
+
+/* Step 1 section */
+.step1{
+    max-width: 1440px;
+    padding: 0 4em;
+    margin-bottom: 9.6em;
+}
+.step1 .container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.step1 .container > span{
+    background-color: rgb(242, 186, 2);
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    border-radius: 16px;
+}
+.step1 .container h2{
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 3em;
+    margin: 0.3em 0 0.5em 0;
+}
+.step1 .container > div{
+    display: flex;
+}
+.step1 .container div img{
+    width: 65%;
+    object-fit: contain;
+    height: auto;
+}
+.step1 .container div div{
+    padding-left: 2.5em;
+}
+.step1 .container p{
+    font-size: 1.3em;
+    margin-bottom: 2em;
+}
+.step1 .container button{
+    font-size: 1.3em;
+}
+
+/* Step 2 section */
+.step2 .container > span{
+    background-color: #9257f5;
+}
+
+/* Step 3 section */
+.step3 .container > span{
+    background-color: #54aaf7;
+}
+.step3 .container div img{
+    order: 2;
+}
+.step3 .container div div{
+    padding-right: 2.5em;
+    padding-left: 0;
+}
+
+/* Question Section */
+#question {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 4em;
+    margin-bottom: 9.6em;
+}
+#question .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#question .container h2{
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+#question .container > div{
+    margin-top: 1em;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1.5em;
+    border-radius: 16px;
+    border: 2px solid #000000;
+    cursor: pointer;
+}
+#question .container span{
+    font-size: 1.5em;
+    font-weight: 500;
+    transition: all 0.5s ease;
+}
+#question .container .visible{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#question .container .visible span:first-child:hover{
+    color: #616161;
+}
+#question .container .extras p{
+    color: #393939;
+    font-size: 1em;
+    margin-top: 2em;
+    line-height: 1.5;
+}
+.animate{
+    transform: rotate(180deg);
+    transition: all 0.5s ease;
+}
+#question .container .extras{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: all 0.6s ease;
+}
+#question .container .extras div{
+    overflow: hidden;
+}
+.dropdown{
+    grid-template-rows: 1fr !important; 
+}
+
+/* Footer Section */
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 12em 4em 4em 4em;
+}
+footer .container{
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+}
+footer .container div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+footer .container img{
+    max-width: 150px;
+}
+footer .container h2{
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 3em;
+}
+footer> img{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    z-index: -1;
+    bottom: 0;
+}
+
+/* Media Queries */
+@media only screen and (min-width:1441px){
+    body{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:767px){
+    header nav div{
+        display: none;
+    }
+    #hero .mobile-img{
+        width: 80%;
+    }
+    header nav img,footer .container img{
+        max-width: 120px;
+    }
+    #hero .mobile-img img:first-child{
+        top: 1.4em;
+        left: -3em;
+    }
+}
+
+@media only screen and (max-width:480px){
+    header{
+        padding: 3em 4em;
+    }
+    
+    #hero .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    #hero h1{
+        font-size: 6em;
+        padding-right: 20%;
+    }
+    #hero p{
+        font-size: 3em;
+        margin: 1em 0;
+    }
+    .black-button{
+        font-size: 4em;
+    }
+    #hero .stars .material-icons{
+        font-size: 3em;
+    }
+    #hero .stars span:last-child{
+        font-size: 1.8em;
+    }
+    #hero .mobile-img{
+        grid-area: 2/1/3/2;
+        height: 55em;
+        width: 100%;
+        overflow: hidden;
+        margin-top: 4em;
+    }
+    #hero .mobile-img::before{
+        content: "";
+        position: absolute;
+        height: 100px;
+        width: 100%;
+        background-image: linear-gradient(0deg, #ffffff, #ffffff00);
+        bottom: 0;
+    }
+    #hero .mobile-img img:last-child{
+        display: none;
+    }
+    #hero .mobile-img img:first-child{
+        width: 20em;
+        left: unset;
+        right: 2em;
+    }
+    #hero .tab-img{
+        margin-top: 4em;
+    }
+    #hero .tab-img img:first-child{
+        width: 32em;
+        top: -35%;
+        right: unset;
+        left: 5%;
+    }
+    #hero .tab-img img:last-child{
+        width: 25em;
+        bottom: -35%;
+        right: 10%;
+    }
+    
+    #process {
+        margin: 30em 0 20em 0;
+    }
+    #process h2{
+        font-family: 'Bricolage Grotesque', sans-serif;
+        font-size: 6em;
+    }
+    #process .steps{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4em;
+    }
+    #process > span{
+        font-size: 3em;
+        margin-top: 1em;
+    }
+    #process .steps span{
+        font-size: 4em;
+    }
+    #process .steps img{
+        width: 12em;
+        margin: 7em;
+        transform: rotate(70deg);
+    }
+
+    #benefit h2{
+        font-size: 6em;
+    }
+    #benefit p{
+        font-size: 3em;
+        line-height: 1.5;
+    }
+    #benefit ul span:first-child{
+        font-size: 3em;
+    }
+    #benefit ul span:last-child{
+        font-size: 3em;
+        margin-left: 0;
+    }
+
+    #example{
+        margin-bottom: 10em;
+    }
+    #example > div{
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: 20px;
+        align-items: center;
+    }
+    #example .right{
+        order: -1;
+        width: 100%;
+        padding: 0 1em 6em 1em;
+    }
+    #example .right img:last-child{
+        display: none;
+    }
+    #example .left{
+        text-align: center;
+        width: 100%;
+        padding: 1em 1em 3.5em 1em;
+    }
+    #example .left > span{
+        font-size: 2em;
+    }
+    #example .left h2{
+        font-size: 6em;
+    }
+    #example .left .heading img{
+        display: none;
+    }
+    #example .left .question span{
+        font-size: 3em;
+    }
+    #example .left .question{
+        padding: 4em 0;
+    }
+    #example .left .points img{
+        object-fit: contain;
+        flex-grow: 1;
+        padding: 0 2px;
+    }
+
+    .step1 .container > span{
+        padding: 5px 10px;
+        font-size: 2em;
+    }
+    .step1 .container h2{
+        font-size: 6em;
+    }
+    .step1 .container > div{
+        flex-direction: column;
+    }
+    .step1 .container div img{
+        width: 100%;
+    }
+    .step1 .container p{
+        font-size: 3em;
+        margin-top: 2em;
+    }
+    .step1 .container div div {
+        padding-left: 0;
+    }
+    .step1 .container button{
+        font-size: 4em;
+    }
+    .step1{
+        margin-bottom: 17em;
+    }
+    .step3 .container div img{
+        order: 0;
+    }
+
+    #question .container h2{
+        font-size: 6em;
+        margin-bottom: 0.5em;
+    }
+    #question .container span{
+        font-size: 3em;
+    }
+    #question .container .extras p{
+        font-size: 2em;
+    }
+
+    footer .container div{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    footer .container h2{
+        font-size: 6em;
+    }
+    footer .container div button{
+        width: 100%;
+        margin-top: 1em;
+    }
+}
